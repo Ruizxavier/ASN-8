@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 8 - Grid Layout</title>
+  <style>
+    /* Grid Layout Styles */
+    .item1 { grid-area: header; }
+    .item2 { grid-area: menu; }
+    .item3 { grid-area: main; }
+    .item4 { grid-area: right; }
+    .item5 { grid-area: footer; }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        'header header header header header header'
+        'menu main main main right right'
+        'footer footer footer footer footer footer';
+      gap: 10px;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+
+    .grid-container > div {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 20px;
+    }
+
+    /* Remove bullet points from menu list */
+    .item2 ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .item2 ul li {
+      margin-bottom: 10px;
+    }
+
+    .item2 ul li a {
+      text-decoration: none;
+      color: #333;
+      padding: 10px;
+      display: block;
+      background-color: #f2f2f2;
+      border-radius: 4px;
+    }
+
+    .item2 ul li a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Assignment 8 </h1>
+
+<div class="grid-container">
+
+  <!-- Header Section -->
+  <header class="item1">
+    <h2>Responsive and Accessible Design</h2>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav class="item2" aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://www.columbusstate.edu" tabindex="1">CSU Website</a></li>
+      <li><a href="https://www.w3schools.com/css/css3_mediaqueries_ex.asp" tabindex="2">Accessibility Standards</a></li>
+      <li><a href="https://www.w3schools.com/css/css_rwd_intro.asp" tabindex="3">Responsive Design Checker</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content Section with Image -->
+  <main class="item3">
+    <img class="csu-image" src="CSU - image.jpeg" alt="Columbus State University" style="width:100%;">
+  </main>
+
+  <!-- Right Section with SVG Logo -->
+  <aside class="item4">
+    <svg width="100" height="100" role="img" aria-label="Pixels the Cat logo">
+      <title>Pixels the Cat</title>
+      <desc>An illustration of a pixelated cat</desc>
+      <image href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44216/pixels-2.svg" width="100" height="100" />
+    </svg>
+  </aside>
+
+  <!-- Footer Section -->
+  <footer class="item5">
+    <p>Xavier Ruiz - Fall 2024</p>
+  </footer>
+</div>
+
+</body>
+</html>
